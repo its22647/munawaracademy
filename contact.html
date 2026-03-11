@@ -3,53 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Munawar Science Academy</title>
+    <title>Contact - Munawar Academy</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container nav-flex-center">
-            <div class="logo academy-anim">MUNAWAR <span>SCIENCE ACADEMY</span></div>
-        </div>
-        <div class="container center-link">
-            <a href="index.html" class="back-link"><i class="fas fa-chevron-left"></i> BACK TO PORTAL</a>
-        </div>
-    </nav>
 
-    <section class="sub-page">
-        <div class="container">
-            <div class="admission-panel">
-                <div class="panel-header">
-                    <h2>Admission <span>Inquiry</span></h2>
-                    <p>Connect with our administration for registrations and campus visits.</p>
-                </div>
-                <div class="contact-methods">
-                    <div class="method-card">
-                        <i class="fas fa-map-marked-alt"></i>
-                        <h4 class="heavy-card-title">Campus Location</h4>
-                        <p class="heavy-card-text">Rani Market, Railway Scheme 1, Chaklala, Rawalpindi.</p>
-                    </div>
-                    <div class="method-card gold-bg">
-                        <i class="fas fa-phone-volume"></i>
-                        <h4 class="heavy-card-title">Direct Contact</h4>
-                        <div class="copy-field-heavy">
-                            <span id="p-num">0345 5513573</span>
-                            <button onclick="copyNum()"><i class="fas fa-copy"></i> COPY</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="call-action-center">
-                    <a href="tel:03455513573" class="main-call-btn">CALL OFFICE NOW</a>
+    <div class="back-nav">
+        <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> BACK TO DASHBOARD</a>
+    </div>
+
+    <div class="admission-ui">
+        <div class="ui-header">
+            <h2>ADMISSION OPEN</h2>
+            <p>Secure your future with professional guidance.</p>
+        </div>
+        
+        <div class="contact-row">
+            <div class="contact-box">
+                <i class="fas fa-location-dot" style="font-size: 2rem; color: var(--accent);"></i>
+                <h3>CAMPUS</h3>
+                <p>Rani Market, Railway Scheme 1, Chaklala, Rawalpindi.</p>
+            </div>
+            <div class="contact-box">
+                <i class="fas fa-phone" style="font-size: 2rem; color: var(--accent);"></i>
+                <h3>WHATSAPP/CALL</h3>
+                <div class="number-badge">
+                    <span id="num">0345 5513573</span>
+                    <button class="btn-copy" onclick="copyNum()">COPY</button>
                 </div>
             </div>
         </div>
-    </section>
+        
+        <a href="tel:03455513573" class="call-btn-large">CALL OFFICE NOW</a>
+    </div>
+
     <script>
         function copyNum() {
-            var n = document.getElementById("p-num").innerText;
-            navigator.clipboard.writeText(n).then(function() { alert("Copied!"); });
+            var n = document.getElementById("num").innerText;
+            navigator.clipboard.writeText(n).then(() => alert("Copied!"));
         }
     </script>
 </body>
